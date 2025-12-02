@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <h1>Student Signup Form</h1>
+        <form id="studentForm">
+            <div>
+                <label for="reg_no">Registration Number: </label>
+                <input type="number" id="reg_no" name="reg_no" required><br>
+            </div>
+<br>
+            <div>
+                <label for="full_name">Full Name: </label>
+                <input type="text" id="full_name" name="full_name" required><br>
+            </div>
+<br>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+            </div>
+<br>
+            <div >
+                <label>Gender: </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+<br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+<br>
+            <div>
+                <label for="phno">Phone Number:</label>
+                <input type="number" id="phno" name="phno" required><br>
+            </div>
+<br>
+            <div>
+                <label for="department">Department: </label>
+                <select id="department" name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Electronics and Electrical Engineering">Electronics and Electrical Engineering</option>
+                    <option value="Garment Technology">Garment Technology</option>
+                    <option value="Commercial Practice">Commercial Practice</option>
+                    <option value="Computer Technology">Computer Technology</option><br>
+                </select>
+            </div>
+<br>
+            <div>
+                <label for="year">Year of Study: </label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1">First Year</option>
+                    <option value="2">Second Year</option>
+                    <option value="3">Third Year</option>
+                    <option value="4">Fourth Year</option>
+                </select>
+            </div>
+<br>
+            <div>
+                <label for="address">Address: </label>
+                <textarea id="address" name="address" required></textarea><br>
+            </div>
+<br>
+            <div>
+                <label for="guardian_phone">Parent/Guardian Phone: </label>
+                <input type="number" id="guardian_phone" name="guardian_phone" required><br>
+            </div>
+<br>
+            <div>
+                <label>Extra-Curricular Activities:</label>
+                <div class="checkbox-group">
+                    <div >
+                        <input type="checkbox" id="sports" name="activities" value="sports">
+                        <label for="sports">Sports</label><br>
+                    </div><br>
+                    <div >
+                        <input type="checkbox" id="music" name="activities" value="music">
+                        <label for="music">Music</label><br>
+                    </div><br>
+                    <div >
+                        <input type="checkbox" id="arts" name="activities" value="arts">
+                        <label for="arts">Arts & Crafts</label><br>
+                    </div><br>
+                    <div>
+                        <input type="checkbox" id="coding" name="activities" value="coding">
+                        <label for="coding">Coding Clubs</label><br>
+                    </div><br>
+                    <div>
+                        <input type="checkbox" id="debate" name="activities" value="debate">
+                        <label for="debate">Debate/Public Speaking</label><br>
+                    </div>
+                </div>
+            </div>
+<br>
+            <div >
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+<br>
+            <div>
+                <label for="confirm_password">Confirm Password: </label>
+                <input type="password" id="confirm_password" name="confirm_password" required><br>
+            </div>
+<br><div>
+                <label for="certificates">Upload Certificates (PDF, JPG, PNG): </label>
+                <input type="file" id="certificates" name="certificates" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+            </div><br>
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+  
+</body>
+</html>
