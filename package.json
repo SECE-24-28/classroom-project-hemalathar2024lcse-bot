@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "feedback",
+=======
   "name": "react_app",
+>>>>>>> bd475910482486e5fff30fec1f1d45d2ccb59767
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +14,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^1.13.2",
+    "date-fns": "^4.1.0",
+=======
+>>>>>>> bd475910482486e5fff30fec1f1d45d2ccb59767
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
