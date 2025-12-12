@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Cycle with Loop</title>
+    <script>
+        let images = ["emc.jpg", "Iced coffee.jpg", "Coffee.png"]; // add more if needed
+        let index = 0;
+
+        function demo() {
+            let img = document.getElementById("im");
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            img.src = images[index];
+        }
+    </script>
+</head>
+<body>
+    <img src="emc.jpg" alt="" width="350px" height="400px" id="im">
+    <br>
+    <button onclick="demo()">Click Here</button>
+</body>
+</html>
