@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tilt</title>
+</head>
+<body>
+    <h1><font color="purple">FETCH DATA FROM REST API</font></h1>
+    <input type="text" id="name" placeholder="Search.....">
+    <button id="lu" onclick="fetchRecords()">Fetch Info</button>
+    <div id="output"></div>
+
+    <script>
+        let loadUserBtn = document.getElementById("lu");
+        let outputDiv = document.getElementById("output");
+
+        loadUserBtn.addEventListener("click", function() {
+            outputDiv.textContent = "Loading...";
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then(users => {
+                    outputDiv.textContent = "";
+                    users.forEach(user => {
+                        let p = document.createElement("p");
+                        p.textContent =`${user.name}  (${user.email})`;
+                        outputDiv.appendChild(p);
+                    });
+                })
+                .catch(error => {
+                    outputDiv.textContent = "Error loading users!";
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styled Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 250px;
+        }
+        h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            width: 50px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #ad428d;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #8a3e7e;
+        }
+    </style>
+    <script>
+        function add() {
+            let a = parseFloat(document.getElementById("t1").value);
+            let b = parseFloat(document.getElementById("t2").value);
+            let c = a + b;
+            document.getElementById("t3").value = c;
+        }
+
+        function subtract() {
+            let a = parseFloat(document.getElementById("t1").value);
+            let b = parseFloat(document.getElementById("t2").value);
+            let c = a - b;
+            document.getElementById("t3").value = c;
+        }
+
+        function multiply() {
+            let a = parseFloat(document.getElementById("t1").value);
+            let b = parseFloat(document.getElementById("t2").value);
+            let c = a * b;
+            document.getElementById("t3").value = c;
+        }
+
+        function divide() {
+            let a = parseFloat(document.getElementById("t1").value);
+            let b = parseFloat(document.getElementById("t2").value);
+            let c = b !== 0 ? a / b : "Error";
+            document.getElementById("t3").value = c;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h3>BASIC CALCULATOR</h3>
+        <input type="number" placeholder="Enter number 1" id="t1"><br>
+        <input type="number" placeholder="Enter number 2" id="t2"><br>
+        <input type="text" placeholder="Answer" id="t3" readonly><br>
+
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+    </div>
+</body>
+</html>

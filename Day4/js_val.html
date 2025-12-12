@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Validation</title>
+    </head>
+    <body>
+        <form action="">
+            <p id="error" style="color:red;"></p>
+            <label for="user"></label>
+        </form>
+      <script>
+        let er=document.getElementById("error");
+        let us=document.getElementById("user");
+        let ma=document.getElementById("mail");
+        let sub=document.getElementById("sub");
+        sub.addEventListener("click",(e=>
+             {
+                e.preventDefault()
+                if(us.value==""||ma.value=="")
+             }
+        )
+    )
+
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>     
+<html>
+<head>
+    <title>Digital Clock</title>
+</head>
+<body>
+
+<h1 id="clock">00:00:00</h1>
+<button onclick="startClock()">Start Clock</button>
+
+<script>
+    let h = 20;
+    let m = 5;
+    let s = 30;
+
+    let intervalID = null; 
+
+    function startClock() {
+        if (intervalID === null) {     
+            intervalID = setInterval(digitalClock, 1000);
+        }
+    }
+
+    function digitalClock() {
+        s++;
+        if (s === 60) {
+            s = 0;
+            m++;
+            if (m === 60) {
+                m = 0;
+                h++;
+                if (h === 24) {
+                    h = 0;
+                }
+            }
+        }
+
+        let sh = h < 10 ? "0" + h : h;
+        let sm = m < 10 ? "0" + m : m;
+        let ss = s < 10 ? "0" + s : s;
+
+document.getElementById("clock").innerText = `${sh}:${sm}:${ss}`;    }
+</script>
+
+</body>
+</html>

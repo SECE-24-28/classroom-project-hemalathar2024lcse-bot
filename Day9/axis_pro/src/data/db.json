@@ -1,0 +1,20 @@
+{
+   "student":
+   [
+    {
+        "sid":1,
+        "sname":"Ram",
+        "smark":80
+    },
+    {
+        "sid":2,
+        "sname":"Prem",
+        "smark":88
+    },
+    {
+        "sid":3,
+        "sname":"Raghu",
+        "smark":60
+    }
+   ]
+}

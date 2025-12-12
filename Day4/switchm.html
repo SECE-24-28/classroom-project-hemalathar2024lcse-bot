@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modes</title>
+    </head>
+    <body id="page">
+        <h1 id="modeText">Light Mode</h1>
+        <button onclick="press()">SwitchMode</button>
+    </body>
+    <script>
+        function press() {
+            let body = document.getElementById("page");
+            let text = document.getElementById("modeText");
+
+            if (body.style.backgroundColor === "black") {
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                text.innerText = "Light Mode";
+            } else {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                text.innerText = "Dark Mode";
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TODO</title>
+</head>
+<body>
+    <input type="text" id="listInput" placeholder="List" required><br><br>
+    <button id="bt">Add</button>
+        <ol id="output"></ol>
+
+    <script>
+        let btn = document.getElementById("bt");
+        let input = document.getElementById("listInput");
+        let output = document.getElementById("output");
+
+        btn.addEventListener("click", function() {
+            let value = input.value.trim(); 
+            if (value !== "") {
+                let item = document.createElement("li");
+                item.textContent = value;
+                output.appendChild(item); 
+                input.value = ""; 
+            }
+        });
+    </script>
+</body>
+</html>
